@@ -1,7 +1,8 @@
-# Spicy Lyrics
+# Spicy Mamma mia!
 
-Hi, I'm Spikerko (the person who made this repo). I've been really passionate about this project, and I'm really happy for this project.
+technically a fork of @spikenew7774 spicy-lyrics
 
-I've seen a problem with the Spotify Lyrics. They're plain, just static colors. So I wanted to build my own version. And here it is: **Spicy Lyrics**. Hope you like it!
+i really dont wanna fork though
 
-![Extension Example](./previews/page.gif)
+
+### GIT GUD
