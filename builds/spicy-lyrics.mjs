@@ -1,5 +1,5 @@
 /*
-    THIS CODE WAS ORIGINALLY MADE BY @surfbryce.
+    THIS CODE WAS ORIGINALLY MADE BY @surfbryce. // clearly not (he did though)
     This is a modified version of it for my needs. All credits for the original code go to @surfbryce on Github.
 */
 
