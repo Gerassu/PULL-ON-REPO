@@ -1,0 +1,69 @@
+
+#SpicyLyricsPage .LyricsContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden ;
+  width: 100%;
+}
+
+#SpicyLyricsPage .LyricsContainer.Hidden {
+  display: none;
+}
+
+
+#SpicyLyricsPage .LyricsContainer .LyricsContent {
+  --TextGlowDef: rgba(255,255,255,0.15) 0px 0px 6px;
+  --ActiveTextGlowDef: rgba(255,255,255,0.4) 0px 0px 14px;
+  --StrongTextGlowDef: rgba(255,255,255,0.68) 0px 0px 16.4px;
+  --StrongerTextGlowDef: rgba(255,255,255,0.74) 0px 0px 16px;
+  --DefaultLyricsSize: clamp(1.85rem,calc(1cqw* 7), 3.5rem);
+  --Simplebar-Scrollbar-Color: rgba(255, 255, 255, 0.6);
+
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: 100cqh;
+  width: 100%;
+  font-size: var(--DefaultLyricsSize) ;
+  transition: opacity, transform, scale 0.2s linear;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  z-index: 9;
+
+  --ImageMask: linear-gradient(
+    180deg,
+    transparent 0,                          /* Fully transparent at the top */
+    var(--spice-sidebar) 16px,              /* Sidebar color starts at 16px */
+    var(--spice-sidebar) calc(100% - 64px), /* Sidebar color ends before the bottom */
+    transparent calc(100% - 16px),          /* Starts fading to transparent */
+    transparent                             /* Fully transparent at the bottom */
+  );
+
+  --webkit-mask-image: var(--ImageMask);
+  mask-image: var(--ImageMask);
+}
+
+#SpicyLyricsPage .LyricsContainer .LyricsContent .BottomSpacer {
+  display: block;
+  height: 50cqh;
+}
+
+#SpicyLyricsPage .LyricsContainer .LyricsContent .TopSpacer {
+  display: block;
+  height: 25cqh;
+}
+
+
+#SpicyLyricsPage .ContentBox .NowBar:not(.Active) + .LyricsContainer .LyricsContent .simplebar-content-wrapper {
+  padding: 0 18cqw;
+}
+
+#SpicyLyricsPage .ContentBox .NowBar.Active:is(.LeftSide) + .LyricsContainer .LyricsContent .simplebar-content-wrapper .simplebar-content {
+  padding: 0 8cqw 0 2cqw !important;
+}
+
+#SpicyLyricsPage .ContentBox .NowBar.Active:is(.RightSide) + .LyricsContainer .LyricsContent .simplebar-content-wrapper .simplebar-content {
+  padding: 0 2cqw 0 8cqw !important;
+}
